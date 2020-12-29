@@ -1,9 +1,14 @@
 import conversion_logic as conv
 
 def guess_checker(value_map, number_input, guess):
+
+    if set(number_input) != set(value_map.keys()):
+        print("You have used characters not included in your number system")
+        return "wrong characters"
+
     number_int = conv.convert_to_int(number_input, value_map)
     result = number_int == guess
-    
+
     if result:
         print(f"Yes, the number {number_input} is equal to {guess}.")
     else:
