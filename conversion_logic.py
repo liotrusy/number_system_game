@@ -1,4 +1,5 @@
 def clean_input(a_string):
+    """remove empty symbols from symbol list"""
     symbols_list = a_string.split(",")
     empty_count = symbols_list.count("")
     for empty_element in range(empty_count):
@@ -8,16 +9,14 @@ def clean_input(a_string):
 def check_for_no_duplicates(symbol_list):
     """control that a given list of symbos does not contain duplicate values"""
     if len(symbol_list) != len(set(symbol_list)):
-        return False
-    return True
+        return True
+    return False
 
-
-# def create_value_map(a_string):
-#     """creates a value map from a given string of unique values"""
+# def create_value_map(symbol_list):
+#     """creates a value map from a given symbol list of unique values"""
 #     value_map = {}
 #     for value, symbol in enumerate(symbols_list):
 #         value_map[symbol.strip()] = value
-
 #     return value_map
 
 # # return numbers in the new number system
