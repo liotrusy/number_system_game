@@ -55,19 +55,15 @@ while conv.check_for_no_duplicates(symbol_list):
     symbols = input(">> ")
     symbol_list = conv.clean_input(symbols)
 
-print("Thanks, let's continue!")
-
 # create a value map
+value_map = conv.create_value_map(symbol_list)
+print(f"""
 
+Great you have created your number system. Here is the map of your number system:
+{value_map}
 
-# value_map = conv.create_value_map(symbols)
-
-# ### must ensure that the input is clean
-
-
-# print("""
-# Great you have created your number system. Let's see if you can create and call correctly a number.
-# Now, type below a number using your number system.""")
+Now, we can start playing. Let's see if you can create a number and guess it correctly.
+Type a number below using your newly created number system!""")
 
 # again = "y"
 # while again == "y":
