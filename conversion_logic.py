@@ -1,9 +1,14 @@
 def clean_input(a_string):
-    """remove empty symbols from symbol list"""
+    """remove empty symbols from symbol list and strips from whie spaces"""
     symbols_list = a_string.split(",")
+
     empty_count = symbols_list.count("")
     for empty_element in range(empty_count):
         symbols_list.remove("")
+
+    for index, symbol in enumerate(symbols_list):
+        symbols_list[index] = symbol.strip()
+    
     return symbols_list
     
 def check_for_no_duplicates(symbol_list):
@@ -12,7 +17,7 @@ def check_for_no_duplicates(symbol_list):
         return True
     return False
 
-# def create_value_map(symbol_list):
+# def create_value_map(symbol_list):  
 #     """creates a value map from a given symbol list of unique values"""
 #     value_map = {}
 #     for value, symbol in enumerate(symbols_list):
