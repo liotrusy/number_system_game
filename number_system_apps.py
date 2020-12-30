@@ -1,18 +1,18 @@
 import conversion_logic as conv
 
-def guess_checker(value_map, number_input, guess):
+def correct_guess_checker(value_map, number_input, correct_guess):
 
     if set(number_input) != set(value_map.keys()):
         print("You have used characters not included in your number system")
         return "wrong characters"
 
     number_int = conv.convert_to_int(number_input, value_map)
-    result = number_int == guess
+    result = number_int == correct_guess
 
     if result:
-        print(f"Yes, the number {number_input} is equal to {guess}.")
+        print(f"Yes, the number {number_input} is equal to {correct_guess}.")
     else:
-        print(f"Sorry, the number {number_input} is not equal to {guess}, it is actually {number_int}")
+        print(f"Sorry, the number {number_input} is not equal to {correct_guess}, it is actually {number_int}")
         print("Here is a map of your number system")
         print(value_map)
     
@@ -34,6 +34,9 @@ Insert below the symbols here - remember start from 0, and separate the symbols 
 symbols = input(">> ")
 value_map = conv.create_value_map(symbols)
 
+### must ensure that the input is clean
+
+
 print("""
 Great you have created your number system. Let's see if you can create and call correctly a number.
 Now, type below a number using your number system.""")
@@ -41,8 +44,8 @@ Now, type below a number using your number system.""")
 again = "y"
 while again == "y":
     number_input = input("Type your number here: ")
-    guess = int(input("So, what number was it? "))
-    guess_checker(value_map, number_input, guess)
+    correct_guess = int(input("So, what number was it? "))
+    correct_guess_checker(value_map, number_input, correct_guess)
     again = input("\nDo you want to play again? [y/n]")
 
 
