@@ -8,7 +8,7 @@ def clean_input(a_string):
 
     for index, symbol in enumerate(symbols_list):
         symbols_list[index] = symbol.strip()
-    
+
     return symbols_list
     
 def check_for_no_duplicates(symbol_list):
@@ -17,12 +17,12 @@ def check_for_no_duplicates(symbol_list):
         return True
     return False
 
-# def create_value_map(symbol_list):  
-#     """creates a value map from a given symbol list of unique values"""
-#     value_map = {}
-#     for value, symbol in enumerate(symbols_list):
-#         value_map[symbol.strip()] = value
-#     return value_map
+def create_value_map(symbol_list):  
+    """creates a value map from a given symbol list of unique values"""
+    value_map = {}
+    for value, symbol in enumerate(symbol_list):
+        value_map[symbol] = value
+    return value_map
 
 # # return numbers in the new number system
 # def convert_to_int(number_repr, value_map):

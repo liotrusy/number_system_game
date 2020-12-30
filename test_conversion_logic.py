@@ -2,6 +2,7 @@ import pytest
 import conversion_logic
 
 class TestInputCorrections:
+
     def test_input_cleaning(self):
         assert conversion_logic.clean_input(",a,,b,c,") == ['a', 'b', 'c']
         assert conversion_logic.clean_input("h,e,l,l,o,") == ['h', 'e', 'l', 'l', 'o']
@@ -11,21 +12,22 @@ class TestInputCorrections:
         assert conversion_logic.check_for_no_duplicates(['h', 'e', 'l', 'l', 'o']) == True
         assert conversion_logic.check_for_no_duplicates(['h', 'e', 'l', 'o']) == False
 
-# class TestValueMap:
+class TestValueMap:
 
-#     def test_mapping_only_characters(self):
-#         values_map = conversion_logic.create_value_map(['a', 'b', 'c'])
-#         target_map = {'a': 0, 'b': 1, 'c': 2}
-#         assert values_map == target_map
+    def test_mapping_only_characters(self):
+        values_map = conversion_logic.create_value_map(['a', 'b', 'c'])
+        target_map = {'a': 0, 'b': 1, 'c': 2}
+        assert values_map == target_map
 
-    # def test_mapping_only_numbers(self):
-    #     values_map = conversion_logic.create_value_map("1,2,3")
-    #     target_map = {'a': 0, 'b': 1, 'c': 2}
-    #     assert values_map == target_map
+    def test_mapping_only_numbers(self):
+        values_map = conversion_logic.create_value_map(['0','1','2'])
+        target_map = {'0': 0, '1': 1, '2': 2}
+        assert values_map == target_map
 
-    #     values_map = conversion_logic.create_value_map("a, b, c")
-    #     target_map = {'a': 0, 'b': 1, 'c': 2}
-    #     assert values_map == target_map
+    def test_mapping_mix_numbers_and_characters(self):
+        values_map = conversion_logic.create_value_map(['a', '0', 'hel'])
+        target_map = {'a': 0, '0': 1, 'hel': 2}
+        assert values_map == target_map
 
 
 # class TestConversionOutput:
