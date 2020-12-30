@@ -12,6 +12,10 @@ class TestInputCorrections:
         assert conversion_logic.check_for_no_duplicates(['h', 'e', 'l', 'l', 'o']) == True
         assert conversion_logic.check_for_no_duplicates(['h', 'e', 'l', 'o']) == False
 
+    def test_stop_doubple_symbols(self):
+        assert conversion_logic.check_for_no_double_symbols(['he', 'l', 'o']) == True
+        assert conversion_logic.check_for_no_double_symbols(['h', 'l', 'o']) == False
+
 class TestValueMap:
 
     def test_mapping_only_characters(self):
@@ -25,8 +29,8 @@ class TestValueMap:
         assert values_map == target_map
 
     def test_mapping_mix_numbers_and_characters(self):
-        values_map = conversion_logic.create_value_map(['a', '0', 'hel'])
-        target_map = {'a': 0, '0': 1, 'hel': 2}
+        values_map = conversion_logic.create_value_map(['a', '0', 'h'])
+        target_map = {'a': 0, '0': 1, 'h': 2}
         assert values_map == target_map
 
 class TestConversionOutput:

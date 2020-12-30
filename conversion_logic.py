@@ -17,6 +17,13 @@ def check_for_no_duplicates(symbol_list):
         return True
     return False
 
+def check_for_no_double_symbols(symbol_list):
+    """check for no dobule symbols in the new number system"""
+    for symbol in symbol_list:
+        if len(symbol) > 1:
+            return True
+    return False
+
 def create_value_map(symbol_list):  
     """creates a value map from a given symbol list of unique values"""
     value_map = {}
