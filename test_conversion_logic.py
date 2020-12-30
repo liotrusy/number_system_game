@@ -29,18 +29,18 @@ class TestValueMap:
         target_map = {'a': 0, '0': 1, 'hel': 2}
         assert values_map == target_map
 
-# class TestConversionOutput:
+class TestConversionOutput:
 
-#     def test_type(self):
-#         value_map = {"0": 0, "1": 1}
-#         output = conversion_logic.convert_to_int('100',value_map)
-#         assert type(output) == int
+    def test_type(self):
+        value_map = {"0": 0, "1": 1}
+        output = conversion_logic.convert_to_int('100',value_map)
+        assert type(output) == int
 
-#     def test_output(self):
-#         value_map = {"0": 0, "1": 1}
-#         output = conversion_logic.convert_to_int('100',value_map)
-#         assert  output == 4
+    def test_output(self):
+        value_map = {"0": 0, "1": 1}
+        output = conversion_logic.convert_to_int('100',value_map)
+        assert  output == 4
 
-#         value_map = {'a': 0, 'b': 1, 'c': 2}
-#         output = conversion_logic.convert_to_int('bb', value_map)
-#         assert output == 4
+        value_map = {'a': 0, 'b': 1, 'c': 2}
+        output = conversion_logic.convert_to_int('bb', value_map)
+        assert output == 4

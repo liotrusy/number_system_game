@@ -24,14 +24,12 @@ def create_value_map(symbol_list):
         value_map[symbol] = value
     return value_map
 
-# # return numbers in the new number system
-# def convert_to_int(number_repr, value_map):
-
-#     """converts a number from newly created number system to integer"""
-#     string_repr = str(number_repr)
-#     integer = 0
-#     base = len(value_map)
-#     for place_value, symbol in enumerate(string_repr[::-1]):
-#         value = value_map[symbol]
-#         integer += value * base ** place_value
-#     return integer
+def convert_to_int(number_repr, value_map):
+    """converts a number from newly created number system to integer"""
+    string_repr = str(number_repr)
+    integer = 0
+    base = len(value_map)
+    for place_value, symbol in enumerate(string_repr[::-1]):
+        value = value_map[symbol]
+        integer += value * base ** place_value
+    return integer
