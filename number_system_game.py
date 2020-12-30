@@ -73,7 +73,6 @@ def correct_guess_checker(value_map, number_input, correct_guess):
     
     return result
 
-
 again = "y"
 while again == "y":
     number_input = input("Type a number using your number system here: ")
