@@ -29,7 +29,6 @@ class TestValueMap:
         target_map = {'a': 0, '0': 1, 'hel': 2}
         assert values_map == target_map
 
-
 # class TestConversionOutput:
 
 #     def test_type(self):
