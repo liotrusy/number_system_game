@@ -6,21 +6,48 @@ This small application allow the user to create a number system and check his/he
 * ensure that the sequence inputted by the user does not include duplicates, or double symbols to represent base numbers.
 * test the new number system by inputting a number using the new notation, inputting a guess (as integer) and checking whether the guess corresponds to the right number
 
-To run the game on your machine, download the files (save them in the same folder):
+## Installation and Exectution
 
-* conversion_logic.py
-* number_syste_app.py - run this file to play the game
+```bash 
+# clone repository
+git clone https://github.com/liotrusy/number_system_game.git
 
----
+```
 
-## Components
+### Prerequisites
+
+* Python 3 - here is the [download link](https://www.python.org/downloads/). Make sure that python is added to PATH variable.
+* Pip. If you install a Python version greater than 3.4 pip is installed together with your Python distribution.<
+* Pytest. Run the following command in the prompt: `` pip install pytest ``
+
+### Run the application
+
+Type the following command in the prompt opened in the same directory (folder) where you've cloned the repository.
+
+```bash
+# for Windows
+python play_game.py
+
+# for Linux or Mac
+python3 play_game.py
+
+```
+
+## Development notes
 
 The application has been written in Python and tested on a Windows machine with a Python 3.9 installation.
 
 The conversion logic and input cleaning components are stored in the file "conversion_logic.py". This was done primarily to isolate the number system creation logic from the main game application - this would help further development and modifications.
 
-The development of the game function and core conversion logic has been done using TDD techniques. The test runner used in this case is pytest. The test files are:
-* test_conversion_logic
-* test_number_system_game
+The development of the game function and core conversion logic has been done using TDD techniques.
 
-The user experience of the main game has been tested mannually, both on a Linux and a Windows machine.
+To run the tests on the conversion logic, type the following command in the prompt opened in the same directory (folder) where you've cloned the repository: 
+
+```bash
+# for number system conversion logic
+pytest test_conversion_logic.py
+
+# for answer checking
+pytest test_answer_checker.py
+
+```

@@ -3,14 +3,15 @@ import conversion_logic
 
 class TestInputCorrections:
 
-    def test_input_cleaning(self):
-        assert conversion_logic.clean_input(",a,,b,c,") == ['a', 'b', 'c']
-        assert conversion_logic.clean_input("h,e,l,l,o,") == ['h', 'e', 'l', 'l', 'o']
-        assert conversion_logic.clean_input("a ,b, c  ") == ['a', 'b', 'c']
+    def test_separate_symbols(self):
+        separator = ","
+        assert conversion_logic.separate_symbols(",a,,b,c,", separator) == ['a', 'b', 'c']
+        assert conversion_logic.separate_symbols("h,e,l,l,o,", separator) == ['h', 'e', 'l', 'l', 'o']
+        assert conversion_logic.separate_symbols("a ,b, c  ", separator) == ['a', 'b', 'c']
 
     def test_stop_duplicate_values(self):
-        assert conversion_logic.check_for_no_duplicates(['h', 'e', 'l', 'l', 'o']) == True
-        assert conversion_logic.check_for_no_duplicates(['h', 'e', 'l', 'o']) == False
+        assert conversion_logic.check_for_no_duplicate_symbols(['h', 'e', 'l', 'l', 'o']) == True
+        assert conversion_logic.check_for_no_duplicate_symbols(['h', 'e', 'l', 'o']) == False
 
     def test_stop_doubple_symbols(self):
         assert conversion_logic.check_for_no_double_symbols(['he', 'l', 'o']) == True

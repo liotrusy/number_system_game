@@ -1,0 +1,12 @@
+This application helps you create and play around with you own number system. Let's get started!
+To begin, you must insert a unique set of symbols you want to use to represent your numbers separated by a comma (,).
+Start from the symbol you'd like to represent 0 with and then move onwards!
+
+Psss... since we are seprating the symbols with the comma (,) unfortunately you will not be able to use it as a symbol in your number system ;)
+
+Here, an EXAMPLE. Let's say we want to use the letters of the word 'game' to create your number system.
+In this example we would say (starting from 0) that 'g' = 0, 'a'= 1, 'm' = 2, 'e' = 3.
+So, to create this number system you'd have to type below: g,a,m,e.
+
+Now, it's your turn! Create your own number system.
+Insert below the symbols here - remember start from 0, and separate the symbols with a comma (,).
