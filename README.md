@@ -22,7 +22,7 @@ git clone https://github.com/liotrusy/number_system_game.git
 
 ### To play the game (run the application)
 
-Type the following command in the prompt opened in the same directory (folder) where you've cloned the repository.
+Type the following command in the prompt opened from the directory (folder) containing the game files.
 
 ```bash
 # for Windows
@@ -38,7 +38,7 @@ python3 play_game.py
 * The development of the build_number_system and answer_checker has been done using TDD techniques.
 * The testing of the play_game module has been done manually
 
-To run the tests on the logic used to build the number system and the answer checking functions, type the following command in the prompt opened in the same directory (folder) where you've cloned the repository: 
+To run the tests on the logic used to build the number system and the answer checking functions, type the following command in the prompt opened from the directory (folder) containing the game files: 
 
 ```bash
 # for logic used to build number system
