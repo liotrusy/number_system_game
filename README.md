@@ -35,13 +35,10 @@ python3 play_game.py
 
 ## Development notes
 
-The application has been written in Python and tested on a Windows machine with a Python 3.9 installation.
+* The development of the build_number_system and answer_checker has been done using TDD techniques.
+* The testing of the play_game module has been done manually
 
-The conversion logic and input cleaning components are stored in the file "conversion_logic.py". This was done primarily to isolate the number system creation logic from the main game application - this would help further development and modifications.
-
-The development of the game function and core conversion logic has been done using TDD techniques.
-
-To run the tests on the conversion logic, type the following command in the prompt opened in the same directory (folder) where you've cloned the repository: 
+To run the tests on the logic used to build the number system and the answer checking functions, type the following command in the prompt opened in the same directory (folder) where you've cloned the repository: 
 
 ```bash
 # for number system conversion logic
