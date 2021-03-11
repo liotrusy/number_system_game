@@ -20,7 +20,7 @@ git clone https://github.com/liotrusy/number_system_game.git
 * Pip. If you install a Python version greater than 3.4 pip is installed together with your Python distribution.<
 * Pytest. Run the following command in the prompt: `` pip install pytest ``
 
-### Run the application
+### To play the game (run the application)
 
 Type the following command in the prompt opened in the same directory (folder) where you've cloned the repository.
 
@@ -41,8 +41,8 @@ python3 play_game.py
 To run the tests on the logic used to build the number system and the answer checking functions, type the following command in the prompt opened in the same directory (folder) where you've cloned the repository: 
 
 ```bash
-# for number system conversion logic
-pytest test_conversion_logic.py
+# for logic used to build number system
+pytest test_build_number_system.py
 
 # for answer checking
 pytest test_answer_checker.py
